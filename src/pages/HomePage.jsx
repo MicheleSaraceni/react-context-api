@@ -10,15 +10,6 @@ export default function Homepage() {
 
     const [postList, setPostList] = useState([]);
 
-    function GetData() {
-        axios
-            .get(apiURL)
-            .then((res) => {
-                console.log(res.data);
-                setPostList(res.data);
-            });
-    }
-
     useEffect(() => { GetData() }, []);
 
     function handleRemoveItem(id) {
